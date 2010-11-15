@@ -28,7 +28,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
     function w_form($instance){
         $rv='';
         $rv.=   '<p>'.$this->w_form_input($instance, 'title', 'Title, if empty will not be shown; if contains %type, it will be replaced with current page type (Site, Page or Post)').'</p>';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'sites', 'Sites buttons to display, comma separated; the order corresponds to the buttons order (left to right)<br/>Supported Sites: digg,twitter,facebook,stumble,buzz (buzz stands for Google Buzz)').'</p>';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'sites', 'Sites buttons to display, comma separated; the order corresponds to the buttons order (left to right)<br/>Supported Sites: <strong>digg,twitter,facebook,stumble,reddit,buzz</strong> (buzz stands for Google Buzz)').'</p>';
         $rv.=   '<p>'.$this->w_form_input($instance, 'hmargin', 'Horizontal space between every button, in pixel (default 4)').'</p>';
         $rv.=   '<p>'.$this->w_form_textarea($instance, 'customcss', 
                     'Custom CSS: You can make custom css rules for your widget that come with predefined classes:<br>
