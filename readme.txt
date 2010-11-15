@@ -4,7 +4,7 @@ Donate link: http://www.strx.it/donate
 Tags: sidebar, sharing, social, simple, twitter, google buzz, facebook, digg, reddit
 Requires at least: 2.8
 Tested up to: 3.0.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 
 == Description ==
 
@@ -24,6 +24,10 @@ Upload the plugin to your blog, Activate it, add to the sidebar from the Widgets
 2. Widget config at www.strx.it
 
 == Changelog ==
+
+= 1.1.1 =
+
+* Added reddit support in widget config
 
 = 1.1 =
 
