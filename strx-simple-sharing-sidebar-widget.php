@@ -113,6 +113,11 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
 		//http://www.stumbleupon.com/badges/
 		return '<script src="http://www.stumbleupon.com/hostedbadge.php?s=5"></script>';
 	}
+	function redditButton(){
+		//http://it.reddit.com/buttons/
+		return '<script type="text/javascript" src="http://it.reddit.com/static/button/button2.js"></script>';
+	}
+
 
 	function currentUrl(){
 		$protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === FALSE ? 'http' : 'https';
