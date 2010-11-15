@@ -4,7 +4,7 @@ Donate link: http://www.strx.it/donate
 Tags: sidebar, sharing, social, simple, twitter, google buzz, facebook, digg
 Requires at least: 2.8
 Tested up to: 3.0.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 == Description ==
 
@@ -12,7 +12,7 @@ Dynamic widget to insert classic social buttons and counters on your sidebar. Ti
 Insert a comma separated list of social sites in the order you want and start sharing. 
 Never forget to share your posts anymore and start increase visitors for your web site.
 
-See also: [Usage Example](http://www.strx.it).
+See also: [Official Blog Post](http://www.strx.it/2010/11/simple-sharing-wordpress-widget/).
 
 == Installation ==
 
