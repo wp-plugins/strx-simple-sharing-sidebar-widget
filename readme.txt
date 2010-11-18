@@ -4,7 +4,7 @@ Donate link: http://www.strx.it/donate
 Tags: sidebar, sharing, social, simple, twitter, google buzz, facebook, digg, reddit
 Requires at least: 2.8
 Tested up to: 3.0.1
-Stable tag: 1.1.1
+Stable tag: 1.2
 
 == Description ==
 
@@ -23,7 +23,21 @@ Upload the plugin to your blog, Activate it, add to the sidebar from the Widgets
 1. Widget at work on www.strx.it
 2. Widget config at www.strx.it
 
+== Frequently Asked Questions ==
+
+= Where can I find more info or support =
+
+[Here](http://www.strx.it/2010/11/simple-sharing-wordpress-widget/).
+
+
+== Upgrade Notice ==
+
+= 1.2 =
+Solved some CSS problems
+
 == Changelog ==
+
+* Added clear:none for preventing buttons to go down on every sidebar CSS configuration
 
 = 1.1.1 =
 
