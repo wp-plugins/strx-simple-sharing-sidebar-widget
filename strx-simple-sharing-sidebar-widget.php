@@ -83,7 +83,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
 		$rv.='<style type="text/css">';
 		$rv.='.strx-simple-sharing-sidebar-buttons { height:72px; } ';
 		//$rv.='.strx-simple-sharing-sidebar-buttons div { float:left; vertical-align:middle; } ';
-		$rv.='.strx-simple-sharing-sidebar-button { clear:none; float:left; vertical-align:middle; } ';
+		$rv.='.strx-simple-sharing-sidebar-button { clear:none !important; float:left; vertical-align:middle; } ';
 		$rv.='.strx-simple-sharing-sidebar-twitter-button { margin-top:2px; } ';
 		$rv.='.strx-simple-sharing-sidebar-stumble-button { margin-top:3px; } ';
 		$rv.='.strx-simple-sharing-sidebar-facebook-button { margin-top:2px; } ';
