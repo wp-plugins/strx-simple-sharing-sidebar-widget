@@ -4,7 +4,7 @@ Donate link: http://www.strx.it/donate
 Tags: sidebar, sharing, social, simple, twitter, google buzz, facebook, digg, reddit
 Requires at least: 2.8
 Tested up to: 3.0.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 
 == Description ==
 

@@ -3,7 +3,7 @@
 Plugin Name: Strx Simple Sharing Sidebar Widget
 Plugin URI: http://www.strx.it
 Description: Simple Sharing Sidebar Widget
-Version: 1.0
+Version: 1.2
 Author: Strx
 Author URI: http://www.strx.it
 License: GPL2
