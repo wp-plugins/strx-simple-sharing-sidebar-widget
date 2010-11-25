@@ -47,13 +47,6 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
                     '<a target="_blank" href="http://www.designpoke.com">poke</a>, '.
                     '<a target="_blank" href="http://www.designbump.com">bump</a>'
                 ).'</p>';
-        //Adsense
-        $rv.='<p><label>What makes my plugins free</label><div style="margin:-8px auto 0 auto; text-align:center;"><script type="text/javascript"><!--
-google_ad_client = "pub-8907793348376201";
-/* 468x60, solo testo per wp-admin */
-google_ad_slot = "8331203622"; google_ad_width = 468; google_ad_height = 60;
-//-->
-</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div></p>';
 
         $rv.=   '<p>'.$this->w_form_input($instance, 'hmargin', 'Horizontal space between every button, in pixel (default 4)').'</p>';
         $rv.=   '<p>'.$this->w_form_input($instance, 'iconsperrow', 'Number of Icons per row (default 10)').'</p>';
