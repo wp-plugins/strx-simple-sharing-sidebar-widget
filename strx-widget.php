@@ -43,7 +43,7 @@ abstract class Strx_Widget extends WP_Widget {
     /** Class constructor */
     function Strx_Widget(){
         $widget_ops=$this->w_defaults();
-        $control_ops = array('width' => 400);
+        $control_ops = array('width' => 462);
         $this->WP_Widget($this->w_id(), $this->w_name(), $widget_ops, $control_ops);
     }
 
