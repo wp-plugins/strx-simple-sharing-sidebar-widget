@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Plugin Name: Strx Simple Sharing Sidebar Widget
 Plugin URI: http://www.strx.it
@@ -31,55 +31,13 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
 
     /** Return the dashboard admin form */
     function w_form($instance){
-        $rv='';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'title', 'Title, if empty will not be shown; if contains %type, it will be replaced with current page type (Site, Page or Post)').'</p>';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'sites', 'Sites buttons to display, comma separated; the order corresponds to the buttons order (left to right)<br/>Supported Sites: '.
-                    '<a target="_blank" href="http://www.digg.com">digg</a>, '.
-                    '<a target="_blank" href="http://www.twitter.com">twitter</a>, '.
-                    '<a target="_blank" href="http://www.facebook.com">facebook</a>, '.
-                    '<a target="_blank" href="http://www.stumbleupon.com">stumble</a>, '.
-                    '<a target="_blank" href="http://www.reddit.com">reddit</a>, '.
-                    '<a target="_blank" href="http://www.fbshare.me">fbshare</a>, '.
-                    '<a target="_blank" href="http://www.google.com/buzz">buzz</a>, '.
-                    '<a target="_blank" href="http://tweetmeme.com/about/retweet_button">retweet</a>, '.
-                    '<a target="_blank" href="http://www.delicious.com">delicious</a>, '.
-                    '<a target="_blank" href="http://www.thewebblend.com">blend</a>, '.
-                    '<a target="_blank" href="http://www.designpoke.com">poke</a>, '.
-                    '<a target="_blank" href="http://www.designbump.com">bump</a>'
-                ).'</p>';
-        //Adsense
-        $rv.='<p><label>What makes my plugins free</label><div style="margin:-8px auto 0 auto; text-align:center;"><script type="text/javascript"><!--
-google_ad_client = "pub-8907793348376201";
-/* 468x60, solo testo per wp-admin */
-google_ad_slot = "8331203622"; google_ad_width = 468; google_ad_height = 60;
-//-->
-</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div></p>';
-
-        $rv.=   '<p>'.$this->w_form_input($instance, 'hmargin', 'Horizontal space between every button, in pixel (default 4)').'</p>';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'iconsperrow', 'Number of Icons per row (default 10)').'</p>';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'rowsvmargin', 'Vertical margin between rows in pixels (default 10)').'</p>';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'i18nsite', 'Translation of the word <b>Site</b> in your language<br>'.
-                    '<b>Title hack</b>: you cal write only <b>%type</b> on the title and insert here the complete phrase '.
-                    'like <b>Share My Blog</b>, or <b>Share myblog.com</b>'
-                ).'</p>';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'i18npage', 'Translation of the word <b>Page</b> in your language. <b>Title hack</b> is valid here too.').'</p>';
-        $rv.=   '<p>'.$this->w_form_input($instance, 'i18npost', 'Translation of the word <b>Post</b> in your language. <b>Title hack</b> is valid here too.').'</p>';
-
-        $rv.=   '<p>'.$this->w_form_textarea($instance, 'customcss', 
-                    'Custom CSS: You can make custom css rules for your widget that come with predefined classes:<br>
-                    <strong>strx-simple-sharing-sidebar-buttons</strong>, widget wrapper<br/>
-                    <strong>strx-simple-sharing-sidebar-button</strong>, applied to every button<br/>
-                    <strong>strx-simple-sharing-sidebar-TYPE-button</strong>, applied to every button with TYPE specified (ie: strx-simple-sharing-sidebar-twitter-button)<br/>
-                    Usage example:<br/>
-                    .strx-simple-sharing-sidebar-twitter-button { border: 1px solid #555; }
-                    ').'</p>';
 
         $affiliates=array(
             //Elegant themes affiliate program http://www.elegantthemes.com/affiliates/
             '<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=6321_0_1_7" target="_blank"><img border="0" src="http://www.elegantthemes.com/affiliates/banners/468x60.gif" width="468" height="60"></a>',
             '<a href="http://www.elegantthemes.com/affiliates/idevaffiliate.php?id=6321_0_1_7" target="_blank"><img border="0" src="http://www.elegantthemes.com/affiliates/banners/468x60.gif" width="468" height="60"></a>',
-            //Envato refer program http://themeforest.net/wiki/referral/basics-referral/referral-program/ 
-            //logos http://themeforest.net/wiki/referral/basics-referral/banners-and-logos/ 
+            //Envato refer program http://themeforest.net/wiki/referral/basics-referral/referral-program/
+            //logos http://themeforest.net/wiki/referral/basics-referral/banners-and-logos/
             //Themeforest
             '<a href="http://themeforest.net?ref=straps" target="_blank"><img border="0" src="http://envato.s3.amazonaws.com/referrer_adverts/tf_468x60_v2.gif" width="468" height="60"></a>',
             '<a href="http://themeforest.net?ref=straps" target="_blank"><img border="0" src="http://envato.s3.amazonaws.com/referrer_adverts/tf_468x60_v1.gif" width="468" height="60"></a>',
@@ -107,6 +65,45 @@ google_ad_slot = "8331203622"; google_ad_width = 468; google_ad_height = 60;
             '<a href="http://www.mojo-themes.com/?r=straps" target="_blank"><img src="http://www.mojo-themes.com/wp-content/uploads/2010/05/mojo-468x60.jpg" border=0 alt="Mojo Themes" width=468 height=60></a>'
         );
         //shuffle($affiliates);
+
+
+        $rv='';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'title', 'Title, if empty will not be shown; if contains %type, it will be replaced with current page type (Site, Page or Post)').'</p>';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'sites', 'Sites buttons to display, comma separated; the order corresponds to the buttons order (left to right)<br/>Supported Sites: '.
+                    '<a target="_blank" href="http://www.digg.com">digg</a>, '.
+                    '<a target="_blank" href="http://www.twitter.com">twitter</a>, '.
+                    '<a target="_blank" href="http://www.facebook.com">facebook</a>, '.
+                    '<a target="_blank" href="http://www.stumbleupon.com">stumble</a>, '.
+                    '<a target="_blank" href="http://www.reddit.com">reddit</a>, '.
+                    '<a target="_blank" href="http://www.fbshare.me">fbshare</a>, '.
+                    '<a target="_blank" href="http://www.google.com/buzz">buzz</a>, '.
+                    '<a target="_blank" href="http://tweetmeme.com/about/retweet_button">retweet</a>, '.
+                    '<a target="_blank" href="http://www.delicious.com">delicious</a>, '.
+                    '<a target="_blank" href="http://www.thewebblend.com">blend</a>, '.
+                    '<a target="_blank" href="http://www.designpoke.com">poke</a>, '.
+                    '<a target="_blank" href="http://www.designbump.com">bump</a>'
+                ).'</p>';
+
+        $rv.='<p><div class="strx-simple-sharing-sidebar-affiliates" style="height:60px; margin: 0 auto; text-align:center;">'.$affiliates[array_rand($affiliates)].'</div></p>';
+
+        $rv.=   '<p>'.$this->w_form_input($instance, 'hmargin', 'Horizontal space between every button, in pixel (default 4)').'</p>';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'iconsperrow', 'Number of Icons per row (default 10)').'</p>';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'rowsvmargin', 'Vertical margin between rows in pixels (default 10)').'</p>';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'i18nsite', 'Translation of the word <b>Site</b> in your language<br>'.
+                    '<b>Title hack</b>: you cal write only <b>%type</b> on the title and insert here the complete phrase '.
+                    'like <b>Share My Blog</b>, or <b>Share myblog.com</b>'
+                ).'</p>';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'i18npage', 'Translation of the word <b>Page</b> in your language. <b>Title hack</b> is valid here too.').'</p>';
+        $rv.=   '<p>'.$this->w_form_input($instance, 'i18npost', 'Translation of the word <b>Post</b> in your language. <b>Title hack</b> is valid here too.').'</p>';
+
+        $rv.=   '<p>'.$this->w_form_textarea($instance, 'customcss',
+                    'Custom CSS: You can make custom css rules for your widget that come with predefined classes:<br>
+                    <strong>strx-simple-sharing-sidebar-buttons</strong>, widget wrapper<br/>
+                    <strong>strx-simple-sharing-sidebar-button</strong>, applied to every button<br/>
+                    <strong>strx-simple-sharing-sidebar-TYPE-button</strong>, applied to every button with TYPE specified (ie: strx-simple-sharing-sidebar-twitter-button)<br/>
+                    Usage example:<br/>
+                    .strx-simple-sharing-sidebar-twitter-button { border: 1px solid #555; }
+                    ').'</p>';
 
         $rv.='<p><div class="strx-simple-sharing-sidebar-affiliates" style="height:60px; margin: 0 auto; text-align:center;">'.$affiliates[array_rand($affiliates)].'</div></p>';
 
@@ -174,11 +171,11 @@ google_ad_slot = "8331203622"; google_ad_width = 468; google_ad_height = 60;
                 if ($firsticon || $firstnewrowicon){
                    $rv.='<div class="strx-simple-sharing-sidebar-buttons">';
                 }
-                                
+
                 if ( !($lasticon || $lastrowicon) ){
                     $st.='margin-right:'.$hmargin.'px; ';
                 }
-                
+
 				$rv.='<div style="'.$st.'" class="strx-simple-sharing-sidebar-button strx-simple-sharing-sidebar-'.$site.'-button">'.
 						$this->{$site.'Button'}().
 					'</div>';
@@ -245,7 +242,7 @@ google_ad_slot = "8331203622"; google_ad_width = 468; google_ad_height = 60;
 	}
     function blendButton(){
         //http://thewebblend.com/tools/vote
-        return '<script src="http://thewebblend.com/sites/all/modules/drigg_external/js/button.js" type="text/javascript"></script>';  
+        return '<script src="http://thewebblend.com/sites/all/modules/drigg_external/js/button.js" type="text/javascript"></script>';
     }
     function pokeButton(){
         //http://www.designpoke.com/static/tools
@@ -254,7 +251,7 @@ google_ad_slot = "8331203622"; google_ad_width = 468; google_ad_height = 60;
     function bumpButton(){
         //http://designbump.com/content/evb
         return '<script type="text/javascript">url_site=location.href;</script><script src="http://designbump.com/sites/all/modules/drigg_external/js/button.js" type="text/javascript"></script>';
-    }  
+    }
     function retweetButton(){
         //http://help.tweetmeme.com/2009/04/06/tweetmeme-button/
         return '<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>';
@@ -276,4 +273,3 @@ google_ad_slot = "8331203622"; google_ad_width = 468; google_ad_height = 60;
 }
 
 StrxSimpleSharingSidebar_Widget::w_init('StrxSimpleSharingSidebar_Widget');
-
