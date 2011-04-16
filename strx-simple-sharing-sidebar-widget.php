@@ -3,7 +3,7 @@
 Plugin Name: Strx Simple Sharing Sidebar Widget
 Plugin URI: http://www.strx.it
 Description: Simple Sharing Sidebar Widget
-Version: 2.0.2
+Version: 2.0.3
 Author: Strx
 Author URI: http://www.strx.it
 License: GPL2
@@ -73,6 +73,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
                     '<a target="_blank" href="http://www.digg.com">digg</a>, '.
                     '<a target="_blank" href="http://www.twitter.com">twitter</a>, '.
                     '<a target="_blank" href="http://www.facebook.com">facebook</a>, '.
+                    '<a target="_blank" href="http://www.linkedin.com">linkedin</a>, '.
                     '<a target="_blank" href="http://www.stumbleupon.com">stumble</a>, '.
                     '<a target="_blank" href="http://www.reddit.com">reddit</a>, '.
                     '<a target="_blank" href="http://www.fbshare.me">fbshare</a>, '.
@@ -206,6 +207,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
 		$rv.='.strx-simple-sharing-sidebar-retweet-button { margin-top:2px; } ';
 		$rv.='.strx-simple-sharing-sidebar-stumble-button { margin-top:3px; } ';
 		$rv.='.strx-simple-sharing-sidebar-facebook-button { margin-top:2px; } ';
+		$rv.='.strx-simple-sharing-sidebar-linkedin-button { margin-top:2px; } ';
         $rv.=$instance['customcss'];
 		$rv.='</style>';
 		return $rv;
@@ -259,6 +261,10 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
     function deliciousButton(){
         //http://www.moretechtips.net/2010/07/quite-delicious-button-jquery-plugin.html
         return '<script type="text/javascript" src="http://delicious-button.googlecode.com/files/jquery.delicious-button-1.0.min.js"></script><a class="delicious-button" href="http://delicious.com/save">Save on Delicious</a>';
+    }
+    function linkedinButton(){
+        //http://www.linkedin.com/publishers
+        return '<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share" data-counter="top"></script>';
     }
 
 	function currentUrl(){

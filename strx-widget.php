@@ -1,5 +1,6 @@
 <?php
 /** Wordpress Widget Helper Class */
+if (!class_exists('Strx_Widget')){
 abstract class Strx_Widget extends WP_Widget {
     /***********************************************************
     **  Abstract Functions
@@ -103,4 +104,19 @@ abstract class Strx_Widget extends WP_Widget {
     function parse_args($instance){
         return wp_parse_args( (array)$instance, $this->w_defaults());
     }
+
+	/** jQuery like extend */
+	function extend() {
+		$args = func_get_args();
+		$extended = array();
+		if(is_array($args) && count($args)) {
+			foreach($args as $array) {
+				if(is_array($array)) {
+					$extended = array_merge($extended, $array);
+				}
+			}
+		}
+		return $extended;
+	}
+}
 }
