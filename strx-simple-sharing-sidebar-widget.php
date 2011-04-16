@@ -3,7 +3,7 @@
 Plugin Name: Strx Simple Sharing Sidebar Widget
 Plugin URI: http://www.strx.it
 Description: Simple Sharing Sidebar Widget
-Version: 2.0.3
+Version: 2.0.4
 Author: Strx
 Author URI: http://www.strx.it
 License: GPL2
@@ -219,7 +219,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
 	}
 	function twitterButton(){
 		//http://twitter.com/about/resources/tweetbutton
-		return '<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="fstraps">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
+		return '<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
 	}
 	function facebookButton(){
 		//http://developers.facebook.com/docs/reference/plugins/like
