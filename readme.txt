@@ -1,10 +1,10 @@
 === Strx Simple Sharing Sidebar Widget ===
 Contributors: straps
 Donate link: http://www.strx.it/donate
-Tags: sidebar, sharing, social, simple, twitter, google buzz, facebook, linkedin, digg, reddit, stumble, stumbleupon, fbshare, blend, blend, poke, designpoke, bump, designbump, retweet, delicious
+Tags: gplus, google plus, google plus 1, plus 1, sidebar, sharing, social, simple, twitter, google buzz, facebook, linkedin, digg, reddit, stumble, stumbleupon, fbshare, blend, blend, poke, designpoke, bump, designbump, retweet, delicious
 Requires at least: 2.8
-Tested up to: 3.1.1
-Stable tag: 2.0.4
+Tested up to: 3.2.1
+Stable tag: 2.1
 
 == Description ==
 
@@ -34,6 +34,9 @@ Upload the plugin to your blog, Activate it, add to the sidebar from the Widgets
 
 
 == Upgrade Notice ==
+
+= 2.1 =
+Added Google +1 button
 
 = 2.0.4 =
 Removed via @fstraps from every tweet

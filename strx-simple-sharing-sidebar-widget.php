@@ -3,7 +3,7 @@
 Plugin Name: Strx Simple Sharing Sidebar Widget
 Plugin URI: http://www.strx.it
 Description: Simple Sharing Sidebar Widget
-Version: 2.0.4
+Version: 2.1
 Author: Strx
 Author URI: http://www.strx.it
 License: GPL2
@@ -18,7 +18,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
     function w_defaults(){
         return array(
             'title' => 'Share This %type',
-            'sites' => 'digg,twitter,buzz,facebook',
+            'sites' => 'gplus,facebook,twitter,digg',
             'hmargin' => '4',
             'customcss' => '',
             'iconsperrow' => '10',
@@ -70,6 +70,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
         $rv='';
         $rv.=   '<p>'.$this->w_form_input($instance, 'title', 'Title, if empty will not be shown; if contains %type, it will be replaced with current page type (Site, Page or Post)').'</p>';
         $rv.=   '<p>'.$this->w_form_input($instance, 'sites', 'Sites buttons to display, comma separated; the order corresponds to the buttons order (left to right)<br/>Supported Sites: '.
+                    '<a target="_blank" href="http://plus.google.com/">gplus</a>, '.
                     '<a target="_blank" href="http://www.digg.com">digg</a>, '.
                     '<a target="_blank" href="http://www.twitter.com">twitter</a>, '.
                     '<a target="_blank" href="http://www.facebook.com">facebook</a>, '.
@@ -207,6 +208,7 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
 		$rv.='.strx-simple-sharing-sidebar-retweet-button { margin-top:2px; } ';
 		$rv.='.strx-simple-sharing-sidebar-stumble-button { margin-top:3px; } ';
 		$rv.='.strx-simple-sharing-sidebar-facebook-button { margin-top:2px; } ';
+		$rv.='.strx-simple-sharing-sidebar-gplus-button { margin-top:2px; } ';
 		$rv.='.strx-simple-sharing-sidebar-linkedin-button { margin-top:2px; } ';
         $rv.=$instance['customcss'];
 		$rv.='</style>';
@@ -265,6 +267,10 @@ class StrxSimpleSharingSidebar_Widget extends Strx_Widget {
     function linkedinButton(){
         //http://www.linkedin.com/publishers
         return '<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share" data-counter="top"></script>';
+    }
+    function gplusButton(){
+        //http://www.google.com/webmasters/+1/button/
+        return '<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><g:plusone size="tall"></g:plusone>';
     }
 
 	function currentUrl(){
